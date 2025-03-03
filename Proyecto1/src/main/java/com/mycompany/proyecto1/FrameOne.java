@@ -87,6 +87,14 @@ public class FrameOne extends JFrame {
         singUp.setPreferredSize(new Dimension(150, 40));
         singUp.setFont(new Font("Arial", Font.ROMAN_BASELINE, 15));
 
+        singUp.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent openSingInWindow) {
+                dispose();
+                FrameFive fifthFrame = new FrameFive();
+            }
+        });
+
         northPanel.add(singUp);
 
         JButton[] northButtons = {threeLinesButton, octoberEatsButton, cart, singIn, singUp};
